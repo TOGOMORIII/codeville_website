@@ -96,12 +96,26 @@ button {
     padding: 10px 20px;
     cursor: pointer;
     margin-top: 10px;
-    transition: padding 0.3s;
+    transition: padding 0.3s, transform 0.3s ease;
 }
 
 button:hover {
     background-color: var(--color2);
     padding: 10px 40px;
+    animation: bounce 0.5s ease;
+}
+
+/* Animation de rebond */
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Le bouton devient légèrement plus grand */
+    }
+    100% {
+        transform: scale(1); /* Retour à la taille normale */
+    }
 }
 
 .indice{
